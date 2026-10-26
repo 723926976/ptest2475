@@ -7,10 +7,6 @@
 <meta name="description" content="28道情境题，拆解你的能量来源、思维方式、决策逻辑与生活节奏，生成专属16型人格档案，附特质、优势、盲区、适配领域与相处建议。">
 <meta name="theme-color" content="#151527">
 
-<!-- ===== AdSense 接入说明：站点获得批准后，在此处粘贴 Google 提供的 adsense 标签脚本 =====
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-================================================================================== -->
-
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23151527' stroke='%23E5B15B' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23E5B15B' stroke-width='1' stroke-dasharray='2 3'/%3E%3Cpath d='M16 4v5M16 23v5M4 16h5M23 16h5' stroke='%23E5B15B' stroke-width='1.4'/%3E%3Cpath d='M16 10l2.2 3.8L22 15.5l-3.8 1.7L16 21l-2.2-3.8L10 15.5l3.8-1.7z' fill='%23E5B15B'/%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://miaoda.feishu.cn">
@@ -153,19 +149,6 @@ img{max-width:100%;display:block}
 .dim-poles{display:flex;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid var(--line-soft);font-size:13.5px}
 .dim-poles span:first-child{color:var(--paper)}
 .dim-poles span:last-child{color:var(--paper-dim)}
-
-/* ================= 广告位预留 ================= */
-.ad-box{
-  margin:36px auto;border:1.5px dashed rgba(229,177,91,.28);border-radius:14px;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
-  color:var(--paper-faint);background:rgba(255,255,255,.015);
-}
-.ad-box--banner{width:100%;max-width:728px;height:96px}
-.ad-box--rect{width:100%;max-width:336px;height:250px}
-.ad-box .ad-tag{font-size:11px;letter-spacing:.3em;color:var(--gold);opacity:.7}
-.ad-box .ad-note{font-size:12.5px}
-.ad-box .ad-sub{font-size:11px;color:var(--paper-faint)}
-/* 接入 AdSense 后，用 <ins class="adsbygoogle"> 替换整个 .ad-box 容器即可 */
 
 /* ================= 16 型图鉴 ================= */
 .types-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
@@ -315,10 +298,8 @@ img{max-width:100%;display:block}
 }
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
-/* 结果页广告位在窄屏收缩 */
+/* 移动端细节 */
 @media(max-width:560px){
-  .ad-box--banner{height:80px}
-  .ad-box--rect{height:230px}
   .hero-stat{padding:14px 8px}
   .hero-stat b{font-size:20px}
   .hero-stat span{font-size:11.5px}
@@ -372,23 +353,6 @@ img{max-width:100%;display:block}
       <p class="hero-note">无需注册账号 · 答案仅在本机计算，不上传服务器</p>
     </div>
   </section>
-
-  <!-- ============ Google AdSense 广告位：首页 Hero 后横幅（728×90 / 移动端 320×50）============
-       接入方法：
-       1. 在 <head> 粘贴 Google 提供的 adsense 异步脚本（见 head 注释）。
-       2. 将下方整个 .ad-box 占位容器替换为：
-          <ins class="adsbygoogle" style="display:block"
-               data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-               data-ad-slot="XXXXXXXXXX"
-               data-ad-format="horizontal"
-               data-full-width-responsive="true"></ins>
-          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  ==================================================================== -->
-  <div class="ad-box ad-box--banner" aria-label="广告位预留">
-    <span class="ad-tag">AD</span>
-    <span class="ad-note">广告位预留 · Google AdSense</span>
-    <span class="ad-sub">接入 AdSense 后此处自动展示横幅广告（728×90）</span>
-  </div>
 
   <section class="section" id="intro">
     <div class="wrap">
@@ -460,15 +424,6 @@ img{max-width:100%;display:block}
     </div>
   </section>
 
-  <!-- ============ Google AdSense 广告位：图鉴底部横幅 ============
-       将本占位容器替换为 adsbygoogle ins 标签（data-ad-slot 换为你的第 2 个广告位 ID）。
-  ==================================================================== -->
-  <div class="ad-box ad-box--banner" aria-label="广告位预留">
-    <span class="ad-tag">AD</span>
-    <span class="ad-note">广告位预留 · Google AdSense</span>
-    <span class="ad-sub">横幅广告（728×90）· 移动端自动适配 320×50</span>
-  </div>
-
   <section class="section" id="faq">
     <div class="wrap">
       <div class="section-head">
@@ -523,7 +478,6 @@ img{max-width:100%;display:block}
       <p>本站为趣味心理测评内容，仅供自我探索与娱乐参考，不构成心理诊断、医疗建议、职业咨询或招聘依据。如有心理健康困扰，请联系专业机构。</p>
       <div class="footer-meta">
         <span>· 答案本地计算，不上传服务器</span>
-        <span>· 页面预留 Google AdSense 广告位</span>
         <span>· 28 题 · 16 型人格</span>
       </div>
       <div class="footer-line">© 2026 星语图鉴 · 保留所有权利</div>
@@ -550,42 +504,13 @@ img{max-width:100%;display:block}
       </button>
       <span class="quiz-privacy" style="margin:0">答案仅在本机计算，不会上传</span>
     </div>
-
-    <!-- ============ Google AdSense 广告位：答题中段（300×250 原生/矩形）============
-         该广告位在第 14 题作答后自动展示；将 .ad-box 替换为 adsbygoogle ins 标签即可。
-    ==================================================================== -->
-    <div id="quiz-ad-slot" style="display:none">
-      <div class="ad-box ad-box--rect" aria-label="广告位预留">
-        <span class="ad-tag">AD</span>
-        <span class="ad-note">广告位预留 · Google AdSense</span>
-        <span class="ad-sub">中插广告（300×250）· 移动端自适应</span>
-      </div>
-    </div>
   </div>
 </main>
 
 <!-- ===================== 视图：结果 ===================== -->
 <main id="view-result" class="view">
-  <!-- ============ Google AdSense 广告位：结果页顶部横幅 ============ -->
-  <div class="wrap wrap-narrow">
-    <div class="ad-box ad-box--banner" aria-label="广告位预留" style="margin-top:32px">
-      <span class="ad-tag">AD</span>
-      <span class="ad-note">广告位预留 · Google AdSense</span>
-      <span class="ad-sub">结果页横幅（728×90）</span>
-    </div>
-  </div>
-
-  <div class="wrap wrap-narrow result-head" id="result-head"></div>
+  <div class="wrap wrap-narrow result-head" id="result-head" style="padding-top:32px"></div>
   <div class="wrap wrap-narrow" id="result-body" style="padding-bottom:20px"></div>
-
-  <!-- ============ Google AdSense 广告位：结果报告底部横幅 ============ -->
-  <div class="wrap wrap-narrow">
-    <div class="ad-box ad-box--banner" aria-label="广告位预留" style="margin-bottom:36px">
-      <span class="ad-tag">AD</span>
-      <span class="ad-note">广告位预留 · Google AdSense</span>
-      <span class="ad-sub">结果页底部横幅（728×90）</span>
-    </div>
-  </div>
 </main>
 
 <!-- ===================== 图鉴详情弹窗 ===================== -->
@@ -1038,10 +963,6 @@ function renderQuiz(){
     </div>`;
 
   document.getElementById('quiz-prev').disabled = state.current === 0;
-
-  // 后半程展示中插广告位
-  const showAd = state.current >= Math.floor(QUESTIONS.length / 2);
-  document.getElementById('quiz-ad-slot').style.display = showAd ? 'block' : 'none';
 }
 
 document.getElementById('quiz-card').addEventListener('click', e=>{
@@ -1155,7 +1076,7 @@ function renderResult(){
       <button class="btn btn-ghost btn-sm" id="btn-retest">重新测试</button>
       <button class="btn btn-ghost btn-sm" id="btn-browse">查看其他类型</button>
     </div>
-    <p class="share-hint">截图上方结果卡片即可分享到小红书 · ${esc(SITE.shareHint)}</p>
+    <p class="share-hint">截图上方结果卡片即可分享 · ${esc(SITE.shareHint)}</p>
 
     <div class="report-block">
       <h3><span class="icon">
@@ -1229,12 +1150,12 @@ async function copyShareText(){
   const text = buildShareText();
   try{
     await navigator.clipboard.writeText(text);
-    showToast('分享文案已复制，去小红书分享吧');
+    showToast('分享文案已复制');
   }catch(err){
     const ta = document.createElement('textarea');
     ta.value = text; document.body.appendChild(ta); ta.select();
     document.execCommand('copy'); document.body.removeChild(ta);
-    showToast('分享文案已复制，去小红书分享吧');
+    showToast('分享文案已复制');
   }
 }
 
