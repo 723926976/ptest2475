@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>星语图鉴 · 16型人格测试 | 28题测出你的灵魂类型</title>
+<meta name="description" content="28道情境题，拆解你的能量来源、思维方式、决策逻辑与生活节奏，生成专属16型人格档案，附特质、优势、盲区、适配领域与相处建议。">
+<meta name="theme-color" content="#151527">
+
+<!-- ===== AdSense 接入说明：站点获得批准后，在此处粘贴 Google 提供的 adsense 标签脚本 =====
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+================================================================================== -->
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23151527' stroke='%23E5B15B' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23E5B15B' stroke-width='1' stroke-dasharray='2 3'/%3E%3Cpath d='M16 4v5M16 23v5M4 16h5M23 16h5' stroke='%23E5B15B' stroke-width='1.4'/%3E%3Cpath d='M16 10l2.2 3.8L22 15.5l-3.8 1.7L16 21l-2.2-3.8L10 15.5l3.8-1.7z' fill='%23E5B15B'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="preconnect" href="https://sf3-scmcdn-cn.feishucdn.com" crossorigin>
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+
+<style>
+/* ================= 设计变量 ================= */
+:root{
+  --ink:#151527;
+  --ink-2:#1E1E36;
+  --ink-3:#272744;
+  --paper:#F2EDDF;
+  --paper-dim:#AEA89A;
+  --paper-faint:#7C7689;
+  --gold:#E5B15B;
+  --gold-deep:#C99342;
+  --gold-soft:rgba(229,177,91,.13);
+  --line:rgba(242,237,223,.13);
+  --line-soft:rgba(242,237,223,.08);
+  --mauve:#9D8BD9;
+  --ok:#7FC8A9;
+  --danger:#E08B7E;
+  --radius:16px;
+  --font-serif:"Noto Serif SC","Songti SC","SimSun",serif;
+  --font-sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink);
+  color:var(--paper);
+  font-family:var(--font-sans);
+  font-size:16px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 18%,rgba(242,237,223,.5),transparent 60%),
+    radial-gradient(1px 1px at 78% 12%,rgba(242,237,223,.35),transparent 60%),
+    radial-gradient(1.2px 1.2px at 88% 64%,rgba(229,177,91,.4),transparent 60%),
+    radial-gradient(1px 1px at 26% 72%,rgba(242,237,223,.28),transparent 60%),
+    radial-gradient(1.4px 1.4px at 52% 34%,rgba(229,177,91,.3),transparent 60%),
+    radial-gradient(1px 1px at 64% 88%,rgba(242,237,223,.25),transparent 60%);
+}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;color:inherit;cursor:pointer;border:none;background:none}
+img{max-width:100%;display:block}
+::selection{background:var(--gold);color:var(--ink)}
+.wrap{position:relative;z-index:1;max-width:940px;margin:0 auto;padding:0 20px}
+.wrap-narrow{max-width:680px}
+
+/* ================= 顶部品牌栏 ================= */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(21,21,39,.82);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line-soft);
+}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand svg{width:32px;height:32px;flex:none}
+.brand-name{font-family:var(--font-serif);font-weight:700;font-size:18px;letter-spacing:.08em}
+.brand-sub{font-size:11px;color:var(--paper-dim);letter-spacing:.18em;margin-top:1px}
+.topnav{display:none;gap:26px;font-size:14px;color:var(--paper-dim)}
+.topnav a:hover{color:var(--gold)}
+@media(min-width:720px){.topnav{display:flex}}
+
+/* ================= Hero ================= */
+.hero{position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.9}
+.hero-mask{position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,21,39,.55) 0%,rgba(21,21,39,.72) 55%,var(--ink) 100%)}
+.hero-inner{position:relative;z-index:1;min-height:86vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding-block:72px 56px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;letter-spacing:.28em;color:var(--gold);
+  border:1px solid var(--gold-soft);border-radius:999px;padding:7px 18px;margin-bottom:30px;
+  background:rgba(21,21,39,.35);
+}
+.eyebrow::before,.eyebrow::after{content:"";width:4px;height:4px;border-radius:50%;background:var(--gold)}
+.hero h1{
+  font-family:var(--font-serif);font-weight:900;
+  font-size:clamp(34px,8vw,56px);line-height:1.25;letter-spacing:.02em;
+  margin-bottom:22px;
+}
+.hero h1 .accent{color:var(--gold)}
+.hero-lead{max-width:560px;color:var(--paper-dim);font-size:16px;line-height:1.9;margin-bottom:38px}
+.hero-stats{display:flex;justify-content:center;gap:0;margin-bottom:40px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:rgba(30,30,54,.5)}
+.hero-stat{padding:18px 26px;flex:1}
+.hero-stat + .hero-stat{border-left:1px solid var(--line)}
+.hero-stat b{display:block;font-family:var(--font-serif);font-size:24px;font-weight:700;color:var(--gold);white-space:nowrap}
+.hero-stat span{font-size:12.5px;color:var(--paper-dim);letter-spacing:.1em}
+.hero-cta{display:flex;flex-direction:column;gap:14px;width:100%;max-width:360px}
+.hero-note{margin-top:20px;font-size:12.5px;color:var(--paper-faint);letter-spacing:.05em}
+@media(min-width:560px){.hero-cta{flex-direction:row;justify-content:center;max-width:none}}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  height:52px;padding:0 32px;border-radius:999px;font-size:16px;font-weight:700;letter-spacing:.06em;
+  transition:transform .15s ease,background .2s ease,border-color .2s ease;
+}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--gold);color:var(--ink)}
+.btn-primary:hover{background:#F0C172}
+.btn-ghost{border:1px solid var(--line);color:var(--paper);background:rgba(255,255,255,.02)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-sm{height:44px;padding:0 22px;font-size:14.5px}
+
+/* ================= 通用区块 ================= */
+.section{padding:64px 0}
+.section-head{text-align:center;margin-bottom:44px}
+.section-eyebrow{font-size:12px;letter-spacing:.3em;color:var(--gold);margin-bottom:12px}
+.section-title{font-family:var(--font-serif);font-weight:700;font-size:clamp(24px,5vw,30px);letter-spacing:.03em}
+.section-sub{color:var(--paper-dim);font-size:15px;margin-top:12px;max-width:520px;margin-left:auto;margin-right:auto}
+
+/* 三步流程 */
+.steps{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:720px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{
+  background:var(--ink-2);border:1px solid var(--line-soft);border-radius:var(--radius);
+  padding:28px 24px;position:relative;
+}
+.step-num{font-family:var(--font-serif);font-size:13px;color:var(--gold);letter-spacing:.2em;margin-bottom:16px}
+.step h3{font-family:var(--font-serif);font-size:18px;margin-bottom:10px}
+.step p{color:var(--paper-dim);font-size:14.5px;line-height:1.8}
+
+/* 四维度说明 */
+.dims{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:720px){.dims{grid-template-columns:1fr 1fr}}
+.dim{
+  background:var(--ink-2);border:1px solid var(--line-soft);border-radius:var(--radius);padding:24px;
+}
+.dim-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.dim-name{font-family:var(--font-serif);font-size:17px;font-weight:700}
+.dim-pair{font-size:13px;color:var(--gold);letter-spacing:.15em}
+.dim p{color:var(--paper-dim);font-size:14px;line-height:1.8}
+.dim-poles{display:flex;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid var(--line-soft);font-size:13.5px}
+.dim-poles span:first-child{color:var(--paper)}
+.dim-poles span:last-child{color:var(--paper-dim)}
+
+/* ================= 广告位预留 ================= */
+.ad-box{
+  margin:36px auto;border:1.5px dashed rgba(229,177,91,.28);border-radius:14px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+  color:var(--paper-faint);background:rgba(255,255,255,.015);
+}
+.ad-box--banner{width:100%;max-width:728px;height:96px}
+.ad-box--rect{width:100%;max-width:336px;height:250px}
+.ad-box .ad-tag{font-size:11px;letter-spacing:.3em;color:var(--gold);opacity:.7}
+.ad-box .ad-note{font-size:12.5px}
+.ad-box .ad-sub{font-size:11px;color:var(--paper-faint)}
+/* 接入 AdSense 后，用 <ins class="adsbygoogle"> 替换整个 .ad-box 容器即可 */
+
+/* ================= 16 型图鉴 ================= */
+.types-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:560px){.types-grid{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:900px){.types-grid{grid-template-columns:repeat(8,1fr)}}
+.type-card{
+  background:var(--ink-2);border:1px solid var(--line-soft);border-radius:14px;
+  padding:18px 14px;text-align:center;transition:border-color .2s ease,transform .15s ease;
+}
+.type-card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.type-dot{width:12px;height:12px;border-radius:50%;margin:0 auto 12px}
+.type-code{font-family:var(--font-serif);font-weight:700;font-size:17px;letter-spacing:.1em}
+.type-name{font-size:13px;color:var(--paper-dim);margin-top:4px}
+
+/* ================= FAQ ================= */
+.faq{max-width:680px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--line-soft)}
+.faq-item summary{
+  list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:22px 4px;font-family:var(--font-serif);font-size:16.5px;cursor:pointer;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary .chev{flex:none;transition:transform .2s ease;color:var(--gold)}
+.faq-item[open] summary .chev{transform:rotate(180deg)}
+.faq-body{padding:0 4px 22px;color:var(--paper-dim);font-size:14.5px;line-height:1.9;max-width:600px}
+
+/* ================= 页脚 ================= */
+.footer{border-top:1px solid var(--line-soft);padding:48px 0 36px;margin-top:40px}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.footer-brand .brand-name{font-size:16px}
+.footer p{color:var(--paper-faint);font-size:13px;line-height:1.9;max-width:640px}
+.footer-meta{display:flex;flex-wrap:wrap;gap:18px;margin-top:22px;font-size:12.5px;color:var(--paper-faint)}
+.footer-meta span{display:inline-flex;align-items:center;gap:6px}
+.footer-line{margin-top:22px;padding-top:18px;border-top:1px solid var(--line-soft);font-size:12px;color:var(--paper-faint)}
+
+/* ================= 视图切换 ================= */
+.view{display:none;position:relative;z-index:1}
+.view.active{display:block;animation:viewIn .35s ease}
+@keyframes viewIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.view.active{animation:none}}
+
+/* ================= 答题页 ================= */
+.quiz-top{display:flex;align-items:center;justify-content:space-between;margin:24px 0 18px}
+.quiz-back{font-size:13.5px;color:var(--paper-dim);display:inline-flex;align-items:center;gap:6px}
+.quiz-back:hover{color:var(--gold)}
+.quiz-meta{font-size:13px;color:var(--paper-dim);letter-spacing:.08em}
+.progress{height:6px;border-radius:99px;background:var(--ink-3);overflow:hidden;margin-bottom:34px}
+.progress-bar{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--gold-deep),var(--gold));transition:width .3s ease}
+.quiz-card{background:var(--ink-2);border:1px solid var(--line-soft);border-radius:20px;padding:32px 24px}
+@media(min-width:720px){.quiz-card{padding:40px 36px}}
+.quiz-qnum{font-size:12.5px;letter-spacing:.24em;color:var(--gold);margin-bottom:14px}
+.quiz-q{font-family:var(--font-serif);font-size:clamp(19px,4.6vw,24px);font-weight:700;line-height:1.6;margin-bottom:30px;min-height:60px}
+.quiz-options{display:flex;flex-direction:column;gap:14px}
+.quiz-option{
+  display:flex;align-items:flex-start;gap:14px;text-align:left;
+  background:var(--ink);border:1px solid var(--line);border-radius:14px;
+  padding:18px 18px;transition:border-color .15s ease,background .15s ease,transform .1s ease;
+  min-height:64px;
+}
+.quiz-option:hover{border-color:var(--gold)}
+.quiz-option.selected{border-color:var(--gold);background:var(--gold-soft)}
+.opt-letter{
+  flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-weight:700;
+  font-size:14px;color:var(--gold);margin-top:1px;
+}
+.quiz-option.selected .opt-letter{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.opt-text{font-size:15.5px;line-height:1.7}
+.quiz-footer{display:flex;align-items:center;justify-content:space-between;margin-top:24px}
+.quiz-prev{font-size:13.5px;color:var(--paper-dim);display:inline-flex;align-items:center;gap:6px}
+.quiz-prev:disabled{opacity:.3;cursor:not-allowed}
+.quiz-prev:not(:disabled):hover{color:var(--gold)}
+.quiz-privacy{text-align:center;margin:28px 0 10px;font-size:12px;color:var(--paper-faint)}
+
+/* ================= 结果页 ================= */
+.result-head{text-align:center;padding:36px 0 10px}
+.result-eyebrow{font-size:12px;letter-spacing:.3em;color:var(--gold);margin-bottom:18px}
+.share-card{
+  position:relative;max-width:520px;margin:26px auto 30px;border-radius:24px;overflow:hidden;
+  background:var(--ink-2);border:1px solid var(--line);
+}
+.share-card-inner{padding:38px 30px 30px}
+.share-top{display:flex;justify-content:space-between;align-items:center;font-size:11.5px;letter-spacing:.18em;color:var(--paper-dim);margin-bottom:30px}
+.share-badge{width:76px;height:76px;border-radius:50%;border:1.5px solid currentColor;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;position:relative}
+.share-badge svg{width:42px;height:42px}
+.share-code{font-family:var(--font-serif);font-weight:900;font-size:clamp(40px,10vw,54px);text-align:center;letter-spacing:.12em}
+.share-name{font-family:var(--font-serif);font-size:22px;text-align:center;margin-top:8px;color:var(--paper)}
+.share-tagline{text-align:center;color:var(--paper-dim);font-size:14.5px;margin-top:14px;line-height:1.8;max-width:380px;margin-left:auto;margin-right:auto}
+.share-traits{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:22px}
+.share-traits span{font-size:12.5px;border:1px solid var(--line);border-radius:999px;padding:5px 13px;color:var(--paper-dim)}
+.share-dims{margin-top:28px;display:flex;flex-direction:column;gap:16px}
+.share-dim{display:grid;grid-template-columns:34px 1fr 34px;align-items:center;gap:12px}
+.share-dim b{font-family:var(--font-serif);font-size:15px}
+.share-dim .r{text-align:right;color:var(--paper-dim);font-weight:400}
+.share-bar{height:8px;border-radius:99px;background:var(--ink-3);overflow:hidden;position:relative}
+.share-bar i{position:absolute;left:0;top:0;bottom:0;border-radius:99px;background:currentColor}
+.share-foot{display:flex;justify-content:space-between;align-items:center;margin-top:30px;padding-top:20px;border-top:1px solid var(--line-soft);font-size:12px;color:var(--paper-faint)}
+.result-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:14px}
+.share-hint{text-align:center;color:var(--paper-faint);font-size:13px;margin:0 0 34px;line-height:1.8}
+
+.report-block{background:var(--ink-2);border:1px solid var(--line-soft);border-radius:18px;padding:28px 24px;margin-bottom:18px}
+@media(min-width:720px){.report-block{padding:32px}}
+.report-block h3{font-family:var(--font-serif);font-size:19px;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.report-block h3 .icon{color:var(--gold)}
+.report-list{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:720px){.report-list.two-col{grid-template-columns:1fr 1fr}}
+.report-item{display:flex;gap:12px;align-items:flex-start}
+.report-item .dot{flex:none;width:7px;height:7px;border-radius:50%;background:var(--gold);margin-top:10px}
+.report-item p{font-size:14.5px;color:var(--paper-dim);line-height:1.8}
+.report-item b{color:var(--paper)}
+.career-tags{display:flex;flex-wrap:wrap;gap:10px}
+.career-tags span{font-size:14px;border:1px solid var(--line);border-radius:999px;padding:8px 15px;color:var(--paper)}
+.relation-text{color:var(--paper-dim);font-size:15px;line-height:2}
+.match-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.match-card{background:var(--ink);border:1px solid var(--line-soft);border-radius:14px;padding:16px 10px;text-align:center;cursor:pointer;transition:border-color .15s}
+.match-card:hover{border-color:var(--gold)}
+.match-card .code{font-family:var(--font-serif);font-weight:700;font-size:15px}
+.match-card .nm{font-size:12px;color:var(--paper-dim);margin-top:4px}
+
+/* ================= 图鉴弹窗 ================= */
+.modal-mask{position:fixed;inset:0;background:rgba(10,10,20,.78);backdrop-filter:blur(6px);z-index:100;display:none;align-items:flex-end;justify-content:center;padding:0}
+.modal-mask.open{display:flex}
+.modal{
+  background:var(--ink-2);border:1px solid var(--line);border-radius:24px 24px 0 0;
+  width:100%;max-width:640px;max-height:82vh;overflow-y:auto;padding:30px 26px 40px;
+}
+@media(min-width:720px){.modal{border-radius:24px;margin-bottom:0;align-self:center}}
+.modal-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px}
+.modal-head .codes{font-family:var(--font-serif);font-size:26px;font-weight:900;letter-spacing:.1em}
+.modal-head .nm{font-size:16px;color:var(--paper-dim);margin-top:2px}
+.modal-close{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--paper-dim);flex:none}
+.modal-close:hover{color:var(--gold);border-color:var(--gold)}
+.modal-tagline{color:var(--paper-dim);font-size:15px;line-height:1.9;margin-bottom:22px}
+.modal-section{margin-bottom:22px}
+.modal-section h4{font-size:13px;letter-spacing:.18em;color:var(--gold);margin-bottom:12px}
+.modal-section ul{list-style:none;display:grid;gap:10px}
+.modal-section li{display:flex;gap:10px;color:var(--paper-dim);font-size:14.5px;line-height:1.8}
+.modal-section li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:11px}
+
+/* toast */
+.toast{
+  position:fixed;left:50%;bottom:80px;transform:translateX(-50%) translateY(20px);
+  background:var(--ink-3);border:1px solid var(--gold);color:var(--paper);
+  padding:12px 22px;border-radius:999px;font-size:14px;z-index:200;
+  opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease;
+  max-width:88vw;text-align:center;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* 结果页广告位在窄屏收缩 */
+@media(max-width:560px){
+  .ad-box--banner{height:80px}
+  .ad-box--rect{height:230px}
+  .hero-stat{padding:14px 8px}
+  .hero-stat b{font-size:20px}
+  .hero-stat span{font-size:11.5px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== 顶部品牌栏 ===================== -->
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a href="#/home" class="brand" aria-label="返回首页">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" stroke="#E5B15B" stroke-width="1.6"/>
+        <circle cx="16" cy="16" r="9" stroke="#E5B15B" stroke-width="1" stroke-dasharray="2 3"/>
+        <path d="M16 4v5M16 23v5M4 16h5M23 16h5" stroke="#E5B15B" stroke-width="1.4"/>
+        <path d="M16 10l2.2 3.8L22 15.5l-3.8 1.7L16 21l-2.2-3.8L10 15.5l3.8-1.7z" fill="#E5B15B"/>
+      </svg>
+      <span>
+        <span class="brand-name">星语图鉴</span>
+        <span class="brand-sub" style="display:block">16型人格测试</span>
+      </span>
+    </a>
+    <nav class="topnav">
+      <a href="#/home" data-scroll="intro">测试介绍</a>
+      <a href="#/home" data-scroll="types">16型图鉴</a>
+      <a href="#/home" data-scroll="faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== 视图：首页 ===================== -->
+<main id="view-home" class="view active">
+
+  <section class="hero">
+    <div class="hero-bg" id="hero-bg" style="background-image:url('https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/Osx4bCVltolMrVx8SyYcvfbynLk')"></div>
+    <div class="hero-mask"></div>
+    <div class="wrap hero-inner">
+      <span class="eyebrow">性格研究所 · 趣味心理测评</span>
+      <h1>你是哪一种<span class="accent">灵魂</span>？</h1>
+      <p class="hero-lead">28 道情境选择题，拆解你的能量来源、思维方式、决策逻辑与生活节奏，生成一份专属人格档案：你的特质、优势、盲区、适配领域与相处建议，一次看完。</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>28</b><span>道情境题</span></div>
+        <div class="hero-stat"><b>5</b><span>分钟左右</span></div>
+        <div class="hero-stat"><b>16 型</b><span>人格结果</span></div>
+      </div>
+      <div class="hero-cta">
+        <button class="btn btn-primary" id="btn-start">开始测试</button>
+        <button class="btn btn-ghost" data-scroll="types">先看 16 型图鉴</button>
+      </div>
+      <p class="hero-note">无需注册账号 · 答案仅在本机计算，不上传服务器</p>
+    </div>
+  </section>
+
+  <!-- ============ Google AdSense 广告位：首页 Hero 后横幅（728×90 / 移动端 320×50）============
+       接入方法：
+       1. 在 <head> 粘贴 Google 提供的 adsense 异步脚本（见 head 注释）。
+       2. 将下方整个 .ad-box 占位容器替换为：
+          <ins class="adsbygoogle" style="display:block"
+               data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+               data-ad-slot="XXXXXXXXXX"
+               data-ad-format="horizontal"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  ==================================================================== -->
+  <div class="ad-box ad-box--banner" aria-label="广告位预留">
+    <span class="ad-tag">AD</span>
+    <span class="ad-note">广告位预留 · Google AdSense</span>
+    <span class="ad-sub">接入 AdSense 后此处自动展示横幅广告（728×90）</span>
+  </div>
+
+  <section class="section" id="intro">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow">HOW IT WORKS</div>
+        <h2 class="section-title">三步拿到你的人格档案</h2>
+        <p class="section-sub">没有繁琐量表，凭第一反应选择最贴近你的情境即可，答案只在本机计算。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01 · 情境选择</div>
+          <h3>凭直觉作答</h3>
+          <p>28 道日常情境题，每题二选一。不评判好坏，选你最真实的反应即可，没有标准答案。</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02 · 实时计分</div>
+          <h3>四维度对照</h3>
+          <p>答案沿能量、信息、决策、节奏四个维度分别计分，画面实时推进进度，可返回修改上一题。</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03 · 生成档案</div>
+          <h3>专属人格报告</h3>
+          <p>得到你的类型代号、核心特质、优势盲区、适配领域、相处建议，以及一张可分享的结果卡。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow">FOUR DIMENSIONS</div>
+        <h2 class="section-title">四个维度，看清自己</h2>
+        <p class="section-sub">测试从四组倾向的组合中推演出你的人格类型。</p>
+      </div>
+      <div class="dims">
+        <div class="dim">
+          <div class="dim-top"><span class="dim-name">能量来源</span><span class="dim-pair">E / I</span></div>
+          <p>你的精力更常从人际互动中获得，还是从独处与内省中恢复。</p>
+          <div class="dim-poles"><span>E · 外向</span><span>I · 内向</span></div>
+        </div>
+        <div class="dim">
+          <div class="dim-top"><span class="dim-name">信息获取</span><span class="dim-pair">S / N</span></div>
+          <p>你更信赖眼前的事实细节，还是抽象联想与未来可能性。</p>
+          <div class="dim-poles"><span>S · 实感</span><span>N · 直觉</span></div>
+        </div>
+        <div class="dim">
+          <div class="dim-top"><span class="dim-name">决策方式</span><span class="dim-pair">T / F</span></div>
+          <p>你更习惯以逻辑与公平为标尺，还是以人情与价值观为依据。</p>
+          <div class="dim-poles"><span>T · 思考</span><span>F · 情感</span></div>
+        </div>
+        <div class="dim">
+          <div class="dim-top"><span class="dim-name">生活节奏</span><span class="dim-pair">J / P</span></div>
+          <p>你更偏好计划与确定，还是灵活开放、保留随机空间。</p>
+          <div class="dim-poles"><span>J · 判断</span><span>P · 感知</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="types" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow">16 PERSONALITIES</div>
+        <h2 class="section-title">16 种人格图鉴</h2>
+        <p class="section-sub">点击任意类型，查看它的特质、优势、盲区与适配方向。</p>
+      </div>
+      <div class="types-grid" id="types-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ Google AdSense 广告位：图鉴底部横幅 ============
+       将本占位容器替换为 adsbygoogle ins 标签（data-ad-slot 换为你的第 2 个广告位 ID）。
+  ==================================================================== -->
+  <div class="ad-box ad-box--banner" aria-label="广告位预留">
+    <span class="ad-tag">AD</span>
+    <span class="ad-note">广告位预留 · Google AdSense</span>
+    <span class="ad-sub">横幅广告（728×90）· 移动端自动适配 320×50</span>
+  </div>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-eyebrow">FAQ</div>
+        <h2 class="section-title">常见问题</h2>
+      </div>
+      <div class="faq">
+        <details class="faq-item" open>
+          <summary>这套测试的依据是什么？
+            <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="faq-body">题目沿经典四组人格倾向（外向/内向、实感/直觉、思考/情感、判断/感知）设计，28 道情境题分别测量四组倾向的偏好强度，组合出 16 种常见人格类型。</div>
+        </details>
+        <details class="faq-item">
+          <summary>测试结果准不准？
+            <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="faq-body">结果反映你作答当下的自我偏好倾向，可作为自我观察与朋友讨论的参考。人格是流动的，同一类型在不同阶段也会表现出不同侧面；如需要专业心理评估，请咨询持证心理咨询师。</div>
+        </details>
+        <details class="faq-item">
+          <summary>我的答案会被收集或上传吗？
+            <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="faq-body">不会。全部计分与结果生成都在你的浏览器本地完成，站点不收集、不存储、不上传任何答题记录，也不需要注册账号。</div>
+        </details>
+        <details class="faq-item">
+          <summary>哪些人适合做这个测试？
+            <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="faq-body">对自我探索感兴趣、想了解自己决策与相处方式的人都可以做；也适合朋友聚会、情侣互测、职场破冰等场景。题目为趣味向，不用于招聘选拔或临床诊断。</div>
+        </details>
+        <details class="faq-item">
+          <summary>测完可以重新测试吗？
+            <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="faq-body">可以。结果页提供「重新测试」按钮，随时可以再测一遍；建议间隔一段时间、状态不同时作答，留意自己倾向的变化。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-brand">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" stroke="#E5B15B" stroke-width="1.6"/>
+          <circle cx="16" cy="16" r="9" stroke="#E5B15B" stroke-width="1" stroke-dasharray="2 3"/>
+          <path d="M16 10l2.2 3.8L22 15.5l-3.8 1.7L16 21l-2.2-3.8L10 15.5l3.8-1.7z" fill="#E5B15B"/>
+        </svg>
+        <span class="brand-name">星语图鉴</span>
+      </div>
+      <p>本站为趣味心理测评内容，仅供自我探索与娱乐参考，不构成心理诊断、医疗建议、职业咨询或招聘依据。如有心理健康困扰，请联系专业机构。</p>
+      <div class="footer-meta">
+        <span>· 答案本地计算，不上传服务器</span>
+        <span>· 页面预留 Google AdSense 广告位</span>
+        <span>· 28 题 · 16 型人格</span>
+      </div>
+      <div class="footer-line">© 2026 星语图鉴 · 保留所有权利</div>
+    </div>
+  </footer>
+</main>
+
+<!-- ===================== 视图：答题 ===================== -->
+<main id="view-quiz" class="view">
+  <div class="wrap wrap-narrow">
+    <div class="quiz-top">
+      <button class="quiz-back" id="quiz-back-home">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        返回首页
+      </button>
+      <span class="quiz-meta" id="quiz-meta"></span>
+    </div>
+    <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+    <div class="quiz-card" id="quiz-card"></div>
+    <div class="quiz-footer">
+      <button class="quiz-prev" id="quiz-prev" disabled>
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        上一题
+      </button>
+      <span class="quiz-privacy" style="margin:0">答案仅在本机计算，不会上传</span>
+    </div>
+
+    <!-- ============ Google AdSense 广告位：答题中段（300×250 原生/矩形）============
+         该广告位在第 14 题作答后自动展示；将 .ad-box 替换为 adsbygoogle ins 标签即可。
+    ==================================================================== -->
+    <div id="quiz-ad-slot" style="display:none">
+      <div class="ad-box ad-box--rect" aria-label="广告位预留">
+        <span class="ad-tag">AD</span>
+        <span class="ad-note">广告位预留 · Google AdSense</span>
+        <span class="ad-sub">中插广告（300×250）· 移动端自适应</span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ===================== 视图：结果 ===================== -->
+<main id="view-result" class="view">
+  <!-- ============ Google AdSense 广告位：结果页顶部横幅 ============ -->
+  <div class="wrap wrap-narrow">
+    <div class="ad-box ad-box--banner" aria-label="广告位预留" style="margin-top:32px">
+      <span class="ad-tag">AD</span>
+      <span class="ad-note">广告位预留 · Google AdSense</span>
+      <span class="ad-sub">结果页横幅（728×90）</span>
+    </div>
+  </div>
+
+  <div class="wrap wrap-narrow result-head" id="result-head"></div>
+  <div class="wrap wrap-narrow" id="result-body" style="padding-bottom:20px"></div>
+
+  <!-- ============ Google AdSense 广告位：结果报告底部横幅 ============ -->
+  <div class="wrap wrap-narrow">
+    <div class="ad-box ad-box--banner" aria-label="广告位预留" style="margin-bottom:36px">
+      <span class="ad-tag">AD</span>
+      <span class="ad-note">广告位预留 · Google AdSense</span>
+      <span class="ad-sub">结果页底部横幅（728×90）</span>
+    </div>
+  </div>
+</main>
+
+<!-- ===================== 图鉴详情弹窗 ===================== -->
+<div class="modal-mask" id="modal-mask">
+  <div class="modal" role="dialog" aria-modal="true" id="modal-body"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ===== 站点配置：修改品牌名、分享引导语在此统一维护 ===== */
+const SITE = {
+  brand: "星语图鉴",
+  fullName: "星语图鉴 · 16型人格测试",
+  shareHint: "结果仅供自我探索参考"
+};
+</script>
+
+<script>
+/* ================= 28 题题库 =================
+   dim: 维度；dimName: 进度条旁显示的维度名；
+   a / b: 选项与对应倾向 lean。 */
+const QUESTIONS = [
+  // —— E / I 能量来源 ——
+  { dim:'EI', dimName:'能量来源', q:'聚会结束时，你的感受更接近：',
+    a:{ text:'聊得很尽兴，还想接着约下一场', lean:'E' },
+    b:{ text:'热闹过后很累，需要独自安静回血', lean:'I' } },
+  { dim:'EI', dimName:'能量来源', q:'遇到棘手问题时，你更习惯：',
+    a:{ text:'先说给别人听，在讨论中理清思路', lean:'E' },
+    b:{ text:'自己先安静想清楚，再说出结论', lean:'I' } },
+  { dim:'EI', dimName:'能量来源', q:'没有安排的周末，你更想：',
+    a:{ text:'约朋友出门吃饭、逛街、认识新人', lean:'E' },
+    b:{ text:'待在家里，按自己的节奏独处', lean:'I' } },
+  { dim:'EI', dimName:'能量来源', q:'在新的社交场合，你通常：',
+    a:{ text:'主动搭话，很快和周围人熟络', lean:'E' },
+    b:{ text:'先观察，等别人主动靠近', lean:'I' } },
+  { dim:'EI', dimName:'能量来源', q:'获得新想法的方式更接近：',
+    a:{ text:'在头脑风暴和交谈中被激发', lean:'E' },
+    b:{ text:'在独处沉淀之后慢慢浮现', lean:'I' } },
+  { dim:'EI', dimName:'能量来源', q:'需要和人沟通一件事，你更倾向：',
+    a:{ text:'直接打电话或发语音说清楚', lean:'E' },
+    b:{ text:'用文字慢慢写明白再发出去', lean:'I' } },
+  { dim:'EI', dimName:'能量来源', q:'长时间被人群围着，你会：',
+    a:{ text:'被大家的活力感染，越待越精神', lean:'E' },
+    b:{ text:'明显感到精力被消耗，想离场', lean:'I' } },
+
+  // —— S / N 信息获取 ——
+  { dim:'SN', dimName:'信息获取', q:'学习一项新技能，你更喜欢：',
+    a:{ text:'先看真实案例，一步步照着操作', lean:'S' },
+    b:{ text:'先理解整体原理和概念框架', lean:'N' } },
+  { dim:'SN', dimName:'信息获取', q:'回忆一件往事，你更容易想起：',
+    a:{ text:'具体细节、时间、画面和当时的物件', lean:'S' },
+    b:{ text:'当时的感受、气氛和大致印象', lean:'N' } },
+  { dim:'SN', dimName:'信息获取', q:'听人讲一个计划，你最先关注：',
+    a:{ text:'具体步骤、资源和能不能落地', lean:'S' },
+    b:{ text:'长远方向、可能性和想象空间', lean:'N' } },
+  { dim:'SN', dimName:'信息获取', q:'描述一件事，你的表达方式更接近：',
+    a:{ text:'按顺序讲事实和经过', lean:'S' },
+    b:{ text:'喜欢用比喻、联想和画面感', lean:'N' } },
+  { dim:'SN', dimName:'信息获取', q:'你更容易被哪类内容吸引：',
+    a:{ text:'真实故事、实用知识和生活经验', lean:'S' },
+    b:{ text:'科幻、隐喻、脑洞和抽象概念', lean:'N' } },
+  { dim:'SN', dimName:'信息获取', q:'动手做一件不熟的事，你倾向：',
+    a:{ text:'先看说明书或教程，照步骤来', lean:'S' },
+    b:{ text:'先摸索试试，凭感觉调整', lean:'N' } },
+  { dim:'SN', dimName:'信息获取', q:'进入一个新环境，你首先注意到：',
+    a:{ text:'现场的具体摆设、现状和已有条件', lean:'S' },
+    b:{ text:'氛围、潜力和未来可能的变化', lean:'N' } },
+
+  // —— T / F 决策方式 ——
+  { dim:'TF', dimName:'决策方式', q:'朋友来找你诉苦，你第一反应是：',
+    a:{ text:'帮他分析问题出在哪、怎么解决', lean:'T' },
+    b:{ text:'先接住情绪，安慰他被理解了', lean:'F' } },
+  { dim:'TF', dimName:'决策方式', q:'评价一部作品或方案，你先看：',
+    a:{ text:'逻辑是否成立、结构是否严谨', lean:'T' },
+    b:{ text:'是否打动你、有没有共鸣', lean:'F' } },
+  { dim:'TF', dimName:'决策方式', q:'做重要决定时，你更看重：',
+    a:{ text:'客观标准、事实和公平原则', lean:'T' },
+    b:{ text:'相关人的感受和关系是否和睦', lean:'F' } },
+  { dim:'TF', dimName:'决策方式', q:'被人批评时，你通常先：',
+    a:{ text:'判断批评是否合理、有没有道理', lean:'T' },
+    b:{ text:'先感到委屈或受伤，需要缓一缓', lean:'F' } },
+  { dim:'TF', dimName:'决策方式', q:'观点争论到最后，你更在意：',
+    a:{ text:'道理要讲赢，坚持正确立场', lean:'T' },
+    b:{ text:'气氛别僵，维护彼此关系', lean:'F' } },
+  { dim:'TF', dimName:'决策方式', q:'评价一个团队或合作对象，你先看：',
+    a:{ text:'能力、效率和角色匹配度', lean:'T' },
+    b:{ text:'相处氛围和彼此是否支持', lean:'F' } },
+  { dim:'TF', dimName:'决策方式', q:'给别人挑礼物，你更倾向：',
+    a:{ text:'实用、品质好、真能用上的', lean:'T' },
+    b:{ text:'对方会喜欢、有心意和纪念感的', lean:'F' } },
+
+  // —— J / P 生活节奏 ——
+  { dim:'JP', dimName:'生活节奏', q:'出门旅行之前，你通常：',
+    a:{ text:'提前定好行程清单和备选方案', lean:'J' },
+    b:{ text:'定大方向，到了再临时安排', lean:'P' } },
+  { dim:'JP', dimName:'生活节奏', q:'手上的待办事项，你习惯：',
+    a:{ text:'列清单，逐项完成打勾', lean:'J' },
+    b:{ text:'凭状态和心情灵活推进', lean:'P' } },
+  { dim:'JP', dimName:'生活节奏', q:'面对截止日期，你的节奏是：',
+    a:{ text:'提前做完，留余量心里踏实', lean:'J' },
+    b:{ text:'临期集中冲刺，效率反而高', lean:'P' } },
+  { dim:'JP', dimName:'生活节奏', q:'你的桌面和生活空间通常：',
+    a:{ text:'物品归类整齐，各有固定位置', lean:'J' },
+    b:{ text:'看起来乱，但自己能找到东西', lean:'P' } },
+  { dim:'JP', dimName:'生活节奏', q:'计划中途被临时改变，你会：',
+    a:{ text:'节奏被打乱，感到烦躁', lean:'J' },
+    b:{ text:'觉得新鲜，顺势调整方向', lean:'P' } },
+  { dim:'JP', dimName:'生活节奏', q:'周末到来之前，你更想：',
+    a:{ text:'提前安排好要做的事', lean:'J' },
+    b:{ text:'留空白，看心情和状态再说', lean:'P' } },
+  { dim:'JP', dimName:'生活节奏', q:'推进一项任务，你喜欢：',
+    a:{ text:'先定好规则、边界和交付标准', lean:'J' },
+    b:{ text:'保留选择空间，边走边看', lean:'P' } }
+];
+
+/* ================= 16 型人格档案 =================
+   color: 类型专属色；traits: 标签；strengths/blindspots: 要点；
+   careers: 适配领域；relation: 相处建议；matches: 兼容类型。 */
+const TYPES = {
+  INTJ: {
+    name:'建筑师', color:'#8FA3F5',
+    tagline:'在蓝图之上，独自建造理想国。',
+    traits:['战略眼光','独立自持','追求卓越'],
+    strengths:['长远规划能力强，善于把抽象目标拆解成系统步骤。','面对压力能保持冷静理性，不被情绪带偏。','对认定的方向执行力坚定，不轻言放弃。'],
+    blindspots:['容易忽略他人情绪需求，表达偏直接尖锐。','对不熟悉的体系容易过度挑剔。','计划受挫时倾向独自硬扛，不愿示弱求助。'],
+    careers:['战略咨询','产品架构','科研开发','投资分析'],
+    relation:'与你相处需要足够的独立空间，你欣赏能在智识上对话、边界清晰的人；亲密关系中记得把欣赏说出口，对方未必能读懂你沉默的认可。',
+    matches:['INTP','ENTJ','INFJ']
+  },
+  INTP: {
+    name:'逻辑学家', color:'#7FD1C9',
+    tagline:'在概念的迷宫里，寻找世界的规则。',
+    traits:['好奇思辨','抽离客观','脑洞开阔'],
+    strengths:['擅长发现概念之间的漏洞与联系，思维灵活。','学习新体系快，乐于拆解复杂问题。','立场开放，能接受事实更新自己的看法。'],
+    blindspots:['容易在理论推演里绕圈子，拖延落地执行。','对重复例行事务缺乏耐心。','情绪表达延迟，常常事后才意识到自己在意什么。'],
+    careers:['算法研究','数据分析','学术理论','系统工程'],
+    relation:'你需要不被打扰的思考空间，也需要有人把你从抽象世界拉回日常；关系里主动回应对方的情绪，比长篇分析更能让对方安心。',
+    matches:['INTJ','ENTP','INFP']
+  },
+  ENTJ: {
+    name:'指挥官', color:'#E5965C',
+    tagline:'站在高处，把团队带向目标。',
+    traits:['果决掌控','目标导向','号召力强'],
+    strengths:['决策速度快，能迅速看清局面并分配资源。','抗压能力强，越是硬仗越有状态。','善于组织他人，推动计划落地。'],
+    blindspots:['容易显得强势，忽视团队情绪疲劳。','对低效容忍度低，批评可能过于直接。','忙碌时容易把亲近的人排在后面。'],
+    careers:['企业管理','项目统筹','创业','金融操盘'],
+    relation:'你习惯主导节奏，亲密关系里试着把决定权交一部分给对方；偶尔展示脆弱，反而会让你更有亲和力。',
+    matches:['INTJ','ENTP','ENFJ']
+  },
+  ENTP: {
+    name:'辩论家', color:'#C79BF0',
+    tagline:'在规则边缘，不断试探新可能。',
+    traits:['机敏风趣','举一反三','不怕挑战'],
+    strengths:['点子多，擅长在对话和碰撞中产出新思路。','反应快，临场应变能力强。','不迷信权威，乐于重新审视既有规则。'],
+    blindspots:['兴趣发散，容易开新坑而不收尾。','争胜心强，有时为了辩论而辩论。','对长期重复的承诺和日常细节缺乏耐性。'],
+    careers:['创新策划','市场策略','产品运营','法律事务'],
+    relation:'你享受智力交锋，伴侣若是好辩之人，别忘了争论归争论、感情归感情；稳定的陪伴需要落地到具体小事上。',
+    matches:['INTP','ENTJ','ENFP']
+  },
+  INFJ: {
+    name:'提倡者', color:'#B98FD4',
+    tagline:'安静但坚定，为心中的信念引路。',
+    traits:['洞察人心','价值驱动','温柔有原则'],
+    strengths:['能读懂他人未说出口的需求，共情力强。','对认定的价值观有持久的坚持。','善于把理想转成细腻的关怀行动。'],
+    blindspots:['容易把别人的情绪揽到自己身上，过度内耗。','对冲突敏感，习惯迁就后再独自受伤。','完美主义下容易对自己要求苛刻。'],
+    careers:['心理咨询','人文教育','写作策划','公益组织'],
+    relation:'你需要能接住你深度情绪的人，关系宁可少而深；学会说出边界，不必把所有人的期待都一肩扛下。',
+    matches:['INFP','ENFJ','INTJ']
+  },
+  INFP: {
+    name:'调停者', color:'#E8A8C8',
+    tagline:'在内心世界，珍藏柔软的诗意。',
+    traits:['理想主义','真诚细腻','审美敏感'],
+    strengths:['感受力丰富，能捕捉文字、艺术与人情里的美。','待人真诚，愿意为认同的人和事投入。','价值观清晰，不轻易随大流。'],
+    blindspots:['容易陷入情绪内省而推迟行动。','对现实妥协感到挫败，理想化他人后容易失望。','不擅长直接表达不满，习惯回避冲突。'],
+    careers:['写作编辑','插画设计','心理咨询','儿童教育'],
+    relation:'你渴望被理解到灵魂深处，伴侣需要耐心听你的隐喻与感受；把情绪写成日常表达，而不是憋在心里等对方猜。',
+    matches:['INFJ','ENFP','INTP']
+  },
+  ENFJ: {
+    name:'主人公', color:'#F0B27A',
+    tagline:'照亮周围，带大家一起成长。',
+    traits:['热忱鼓舞','共情力强','富有感召力'],
+    strengths:['善于发现他人优点并给予鼓励。','组织能力与同理心兼备，能凝聚团队。','对关系投入主动，愿意为共同目标付出。'],
+    blindspots:['容易优先满足别人而忽略自己。','对他人的失望反应过度。','控制欲会以“为你好”的形式出现，需要觉察边界。'],
+    careers:['教育培训','人力资源','公关沟通','社群运营'],
+    relation:'你习惯照顾全场，亲密关系里允许自己被照顾；欣赏你的人需要的是真实的你，不只是永远周到的你。',
+    matches:['INFJ','ENFP','ENTJ']
+  },
+  ENFP: {
+    name:'竞选者', color:'#F2C879',
+    tagline:'在生活的惊喜里，收集各种可能。',
+    traits:['热情自由','共情善谈','创意丰富'],
+    strengths:['感染力强，能带动气氛和团队士气。','想法新鲜，擅长把不同圈子的人和事连起来。','对新体验保持开放，可塑性高。'],
+    blindspots:['容易三分钟热度，承诺难以长期兑现。','害怕被约束，回避沉闷的例行事务。','情绪起伏直接，可能波及周围人。'],
+    careers:['品牌活动','内容创作','跨界策划','用户运营'],
+    relation:'你需要关系里保留新鲜感和空间，避免被规则捆住；长期感情靠日复一日的小事维持，别只活在高光时刻。',
+    matches:['INFP','ENFJ','ENTP']
+  },
+  ISTJ: {
+    name:'物流师', color:'#6FA8DC',
+    tagline:'把责任放在心上，做事有板有眼。',
+    traits:['可靠务实','恪守规则','细致稳健'],
+    strengths:['交付质量稳定，承诺的事一定落实。','重视细节，能发现流程里的漏洞。','尊重制度与经验，团队中值得托付。'],
+    blindspots:['对新变化接受偏慢，倾向沿用既有经验。','表达情绪含蓄，内心感受不轻易外露。','对不按规矩办事的人容忍度低。'],
+    careers:['财务审计','行政管理','档案法务','质检风控'],
+    relation:'你的可靠是最大的安全感，亲密关系里学着把爱说出来；伴侣需要听到语言上的肯定，而不只是行动上的照顾。',
+    matches:['ISFJ','ESTJ','ISTP']
+  },
+  ISFJ: {
+    name:'守卫者', color:'#8FCB9B',
+    tagline:'在日常细节里，默默守护身边人。',
+    traits:['体贴周到','稳妥可靠','注重实务'],
+    strengths:['记得住他人的习惯与需求，照顾细致。','做事踏实，不抢风头却能把后方稳住。','责任感强，值得长期信赖。'],
+    blindspots:['不习惯拒绝别人，容易积压自己的疲惫。','回避正面冲突，委屈常留在心里。','变化来临时容易焦虑，需要时间适应。'],
+    careers:['护理康养','行政文员','家政管理','图书馆员'],
+    relation:'你把关心藏在行动里，对方未必每次都能收到；直接说出自己的需求，比默默等待被发现更有效。',
+    matches:['ISTJ','ESFJ','ISFP']
+  },
+  ESTJ: {
+    name:'总经理', color:'#D9826E',
+    tagline:'秩序在握，让每件事各就各位。',
+    traits:['务实果断','组织力强','规则意识重'],
+    strengths:['擅长把事情安排得井井有条，执行力强。','重视结果和效率，说话办事直接清晰。','责任心强，愿意承担管理压力。'],
+    blindspots:['风格偏强硬，容易让他人感到压迫。','对个人情绪和非正式沟通缺乏耐心。','认定规则后较难接受变通方案。'],
+    careers:['企业管理','供应链运营','军警公职','项目督导'],
+    relation:'你习惯掌控全局，亲密关系里听取对方的意见不等于认输；留出让对方发挥的空间，关系会更舒展。',
+    matches:['ISTJ','ESFJ','ESTP']
+  },
+  ESFJ: {
+    name:'执政官', color:'#E8B08A',
+    tagline:'以人情维系圈子，让身边人被惦记。',
+    traits:['热心周到','重视和谐','乐于助人'],
+    strengths:['社交纽带感强，能记住人情往来。','氛围营造能力好，让周围人感到被接纳。','责任心强，愿意为集体付出实际行动。'],
+    blindspots:['评价自己时常依赖他人反馈，容易敏感。','回避冲突，对批评反应强烈。','对不符合主流期待的人和事包容性有限。'],
+    careers:['客户服务','会务接待','社区工作','医护辅助'],
+    relation:'你从关系中获得能量，也要给对方独处的空间；不必用“被喜欢”衡量自己的价值，真实的想法值得表达。',
+    matches:['ISFJ','ESTJ','ESFP']
+  },
+  ISTP: {
+    name:'鉴赏家', color:'#7FC6E8',
+    tagline:'冷静拆解，把手感练到极致。',
+    traits:['冷静动手','逻辑务实','灵活应变'],
+    strengths:['擅长拆解实物与机械系统，动手能力强。','临场冷静，突发状况下反应迅速。','不喜空谈，用结果说话。'],
+    blindspots:['情感表达疏离，让人觉得难接近。','对抽象理论和长期规划兴趣低。','不喜欢被安排，可能显得不合群。'],
+    careers:['工程技术','机械维修','数据分析','急救外勤'],
+    relation:'你习惯用行动而非语言表达，伴侣需要听到你的感受；关系里偶尔主动表达关心，比独自行动更让对方安心。',
+    matches:['ISFP','ESTP','ISTJ']
+  },
+  ISFP: {
+    name:'探险家', color:'#9ED6B8',
+    tagline:'随此刻的感受，自在舒展。',
+    traits:['柔和随性','审美敏锐','低调独立'],
+    strengths:['对美与质感有天然敏感，动手有品味。','待人温和，不喜欢控制他人。','活在当下，能给身边人带来松弛感。'],
+    blindspots:['回避长远规划和正面冲突，临场容易犹豫。','不擅长为自己争取权益。','想法藏得深，他人难以了解你的内在。'],
+    careers:['手工工艺','视觉设计','餐饮料理','户外向导'],
+    relation:'你需要尊重你节奏的人，不要被推着做决定；把心里想的关系说出来，避免对方误以为你无所谓。',
+    matches:['ISTP','ESFP','ISFJ']
+  },
+  ESTP: {
+    name:'企业家', color:'#E87E6B',
+    tagline:'在现场反应，把机会先抓到手。',
+    traits:['大胆务实','临场反应强','热爱挑战'],
+    strengths:['行动力快，机会面前不犹豫。','擅长谈判和说服，现场掌控力强。','适应环境变化，不怕风险试错。'],
+    blindspots:['容易冲动决策，忽略长远后果。','对规则和例行事务不耐烦。','承诺与细节容易虎头蛇尾。'],
+    careers:['销售拓展','体育竞技','应急救援','创业实战'],
+    relation:'你享受刺激和新鲜，亲密关系需要持续经营而非只靠火花；沉下来倾听伴侣，会让关系走得更远。',
+    matches:['ISTP','ESFP','ESTJ']
+  },
+  ESFP: {
+    name:'表演者', color:'#F2A6B2',
+    tagline:'把当下的热闹，带给在场的每个人。',
+    traits:['热情开朗','享受生活','共情鲜活'],
+    strengths:['气氛带动能力强，让聚会和团队更开心。','待人热情真诚，善于照顾现场感受。','动手快，临场表现自然有感染力。'],
+    blindspots:['容易回避严肃话题和长期规划。','情绪外露，压力下容易脱口而出。','对独处和深度内省缺乏耐心。'],
+    careers:['演艺主持','活动演出','美妆造型','零售导购'],
+    relation:'你需要被看见和赞美，也别忘了关注伴侣的情绪；把热闹收一收，两个人安静相处的时间同样重要。',
+    matches:['ISFP','ESTP','ESFJ']
+  }
+};
+
+/* 维度元信息：用于结果页对比条与中文标注 */
+const DIM_META = [
+  { key:'EI', left:'E', right:'I', label:'能量来源', leftName:'外向', rightName:'内向' },
+  { key:'SN', left:'S', right:'N', label:'信息获取', leftName:'实感', rightName:'直觉' },
+  { key:'TF', left:'T', right:'F', label:'决策方式', leftName:'思考', rightName:'情感' },
+  { key:'JP', left:'J', right:'P', label:'生活节奏', leftName:'判断', rightName:'感知' }
+];
+</script>
+
+<script>
+/* ================= 运行状态 ================= */
+const state = {
+  current: 0,        // 当前题号（下标）
+  answers: [],      // 每题选择：{ lean, dim }
+  result: null,      // 计分结果 { code, counts, ratios }
+  resultId: ''
+};
+
+/* ================= 通用工具 ================= */
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(showToast._timer);
+  showToast._timer = setTimeout(()=>t.classList.remove('show'), 2200);
+}
+
+function todayText(){
+  const d = new Date();
+  return `${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日`;
+}
+
+function esc(str){
+  return String(str).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+/* ================= 视图切换与路由 ================= */
+function showView(name){
+  ['home','quiz','result'].forEach(v=>{
+    document.getElementById('view-'+v).classList.toggle('active', v===name);
+  });
+  window.scrollTo({top:0, behavior:'auto'});
+  if(name==='quiz') renderQuiz();
+  if(name==='result') renderResult();
+}
+
+function route(){
+  const h = (location.hash || '#/home').replace('#/','');
+  if(h==='quiz'){ showView('quiz'); return; }
+  if(h==='result'){
+    if(state.result){ showView('result'); } else { location.hash = '#/home'; }
+    return;
+  }
+  showView('home');
+}
+
+window.addEventListener('hashchange', route);
+
+/* ================= 首页：16 型图鉴 ================= */
+function renderTypeGrid(){
+  const grid = document.getElementById('types-grid');
+  grid.innerHTML = Object.keys(TYPES).map(code=>{
+    const t = TYPES[code];
+    return `<button class="type-card" data-type="${code}" aria-label="${code} ${t.name}">
+      <span class="type-dot" style="background:${t.color}"></span>
+      <div class="type-code">${code}</div>
+      <div class="type-name">${t.name}</div>
+    </button>`;
+  }).join('');
+}
+
+/* ================= 图鉴弹窗 ================= */
+function renderTypeModal(code){
+  const t = TYPES[code];
+  if(!t) return;
+  const strengths = t.strengths.map(s=>`<li><span><b>${esc(s)}</b></span></li>`).join('');
+  const blindspots = t.blindspots.map(s=>`<li><span><b>${esc(s)}</b></span></li>`).join('');
+  const careers = t.careers.map(c=>`<span>${esc(c)}</span>`).join('');
+  const matches = t.matches.map(m=>{
+    const mt = TYPES[m];
+    return `<button class="match-card" data-type="${m}">
+      <div class="code" style="color:${mt.color}">${m}</div>
+      <div class="nm">${mt.name}</div>
+    </button>`;
+  }).join('');
+
+  document.getElementById('modal-body').innerHTML = `
+    <div class="modal-head">
+      <div>
+        <div class="codes" style="color:${t.color}">${code}</div>
+        <div class="nm">${t.name}</div>
+      </div>
+      <button class="modal-close" id="modal-close" aria-label="关闭">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <p class="modal-tagline">${esc(t.tagline)}</p>
+    <div class="share-traits" style="justify-content:flex-start;margin:0 0 22px">
+      ${t.traits.map(x=>`<span>${esc(x)}</span>`).join('')}
+    </div>
+    <div class="modal-section">
+      <h4>核心优势</h4>
+      <ul>${strengths}</ul>
+    </div>
+    <div class="modal-section">
+      <h4>需要留意的盲区</h4>
+      <ul>${blindspots}</ul>
+    </div>
+    <div class="modal-section">
+      <h4>适合的领域</h4>
+      <div class="career-tags">${careers}</div>
+    </div>
+    <div class="modal-section">
+      <h4>关系与相处</h4>
+      <p class="relation-text">${esc(t.relation)}</p>
+    </div>
+    <div class="modal-section">
+      <h4>容易合拍的类型</h4>
+      <div class="match-row">${matches}</div>
+    </div>`;
+
+  document.getElementById('modal-mask').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('modal-close').addEventListener('click', closeModal);
+}
+
+function closeModal(){
+  document.getElementById('modal-mask').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('modal-mask').addEventListener('click', e=>{
+  if(e.target === e.currentTarget) closeModal();
+});
+document.addEventListener('keydown', e=>{
+  if(e.key==='Escape') closeModal();
+});
+
+/* ================= 答题流程 ================= */
+function startQuiz(){
+  state.current = 0;
+  state.answers = [];
+  state.result = null;
+  state.resultId = '';
+  location.hash = '#/quiz';
+}
+
+function renderQuiz(){
+  const q = QUESTIONS[state.current];
+  const answered = state.answers[state.current];
+
+  document.getElementById('quiz-meta').textContent =
+    `第 ${state.current+1} / ${QUESTIONS.length} 题 · 考察${q.dimName}`;
+
+  const pct = Math.round(state.current / QUESTIONS.length * 100);
+  document.getElementById('progress-bar').style.width = pct + '%';
+
+  document.getElementById('quiz-card').innerHTML = `
+    <div class="quiz-qnum">QUESTION ${String(state.current+1).padStart(2,'0')}</div>
+    <div class="quiz-q">${esc(q.q)}</div>
+    <div class="quiz-options">
+      <button class="quiz-option ${answered && answered.lean===q.a.lean ? 'selected':''}" data-opt="0">
+        <span class="opt-letter">A</span><span class="opt-text">${esc(q.a.text)}</span>
+      </button>
+      <button class="quiz-option ${answered && answered.lean===q.b.lean ? 'selected':''}" data-opt="1">
+        <span class="opt-letter">B</span><span class="opt-text">${esc(q.b.text)}</span>
+      </button>
+    </div>`;
+
+  document.getElementById('quiz-prev').disabled = state.current === 0;
+
+  // 后半程展示中插广告位
+  const showAd = state.current >= Math.floor(QUESTIONS.length / 2);
+  document.getElementById('quiz-ad-slot').style.display = showAd ? 'block' : 'none';
+}
+
+document.getElementById('quiz-card').addEventListener('click', e=>{
+  const btn = e.target.closest('.quiz-option');
+  if(!btn) return;
+  const q = QUESTIONS[state.current];
+  const optIdx = Number(btn.dataset.opt);
+  const lean = optIdx === 0 ? q.a.lean : q.b.lean;
+  state.answers[state.current] = { lean, dim: q.dim };
+  btn.classList.add('selected');
+  document.querySelectorAll('.quiz-option').forEach(o=>o.style.pointerEvents='none');
+
+  setTimeout(()=>{
+    document.querySelectorAll('.quiz-option').forEach(o=>o.style.pointerEvents='');
+    if(state.current < QUESTIONS.length - 1){
+      state.current++;
+      renderQuiz();
+    } else {
+      finishQuiz();
+    }
+  }, 180);
+});
+
+document.getElementById('quiz-prev').addEventListener('click', ()=>{
+  if(state.current > 0){ state.current--; renderQuiz(); }
+});
+
+document.getElementById('quiz-back-home').addEventListener('click', ()=>{
+  location.hash = '#/home';
+});
+
+/* ================= 计分 ================= */
+function finishQuiz(){
+  const counts = { E:0, I:0, S:0, N:0, T:0, F:0, J:0, P:0 };
+  state.answers.forEach(a=>{ if(a) counts[a.lean]++; });
+
+  // 平票时默认取前者（E / S / T / J）
+  const dimLetter = {
+    EI: counts.E >= counts.I ? 'E' : 'I',
+    SN: counts.S >= counts.N ? 'S' : 'N',
+    TF: counts.T >= counts.F ? 'T' : 'F',
+    JP: counts.J >= counts.P ? 'J' : 'P'
+  };
+  const code = dimLetter.EI + dimLetter.SN + dimLetter.TF + dimLetter.JP;
+
+  const ratios = {
+    EI: counts.E + counts.I ? Math.round(counts.E/(counts.E+counts.I)*100) : 50,
+    SN: counts.S + counts.N ? Math.round(counts.S/(counts.S+counts.N)*100) : 50,
+    TF: counts.T + counts.F ? Math.round(counts.T/(counts.T+counts.F)*100) : 50,
+    JP: counts.J + counts.P ? Math.round(counts.J/(counts.J+counts.P)*100) : 50
+  };
+
+  state.result = { code, counts, ratios };
+  state.resultId = 'No. ' + Math.floor(10000 + Math.random()*89999);
+  location.hash = '#/result';
+}
+
+/* ================= 结果页 ================= */
+function dimBarHtml(dim){
+  const meta = DIM_META.find(m=>m.key===dim.key);
+  const pct = state.result.ratios[dim.key];
+  const color = TYPES[state.result.code].color;
+  return `<div class="share-dim">
+    <b style="color:${color}">${meta.left}<small style="color:var(--paper-faint);font-weight:400;font-size:11px"> ${pct}%</small></b>
+    <div class="share-bar" style="color:${color}"><i style="width:${pct}%"></i></div>
+    <span class="r">${meta.right}</span>
+  </div>`;
+}
+
+function renderResult(){
+  const r = state.result;
+  if(!r){ location.hash = '#/home'; return; }
+  const t = TYPES[r.code];
+
+  document.getElementById('result-head').innerHTML = `
+    <div class="result-eyebrow">你的人格档案已生成</div>
+  `;
+
+  const dimBars = DIM_META.map(d=>dimBarHtml(d)).join('');
+  const traits = t.traits.map(x=>`<span>${esc(x)}</span>`).join('');
+
+  document.getElementById('result-body').innerHTML = `
+    <section class="share-card" style="color:${t.color}">
+      <div class="share-card-inner" style="color:var(--paper)">
+        <div class="share-top">
+          <span>${esc(SITE.fullName)}</span>
+          <span>${esc(t.name)}</span>
+        </div>
+        <div class="share-badge" style="color:${t.color}">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.3"/>
+            <circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width=".9" stroke-dasharray="2 3"/>
+            <path d="M16 4.5v4M16 23.5v4M4.5 16h4M23.5 16h4" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M16 10.5l1.9 3.3 3.6 1.5-3.6 1.5L16 20.5l-1.9-3.7-3.6-1.5 3.6-1.5z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="share-code" style="color:${t.color}">${r.code}</div>
+        <div class="share-name">${esc(t.name)}</div>
+        <p class="share-tagline">${esc(t.tagline)}</p>
+        <div class="share-traits">${traits}</div>
+        <div class="share-dims">${dimBars}</div>
+        <div class="share-foot">
+          <span>${state.resultId}</span>
+          <span>${todayText()}</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="result-actions">
+      <button class="btn btn-primary btn-sm" id="btn-copy">复制分享文案</button>
+      <button class="btn btn-ghost btn-sm" id="btn-retest">重新测试</button>
+      <button class="btn btn-ghost btn-sm" id="btn-browse">查看其他类型</button>
+    </div>
+    <p class="share-hint">截图上方结果卡片即可分享到小红书 · ${esc(SITE.shareHint)}</p>
+
+    <div class="report-block">
+      <h3><span class="icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3l1.8 4.6L18 9.5l-4.2 1.9L12 16l-1.8-4.6L6 9.5l4.2-1.9z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </span>你的核心特质</h3>
+      <div class="career-tags">${traits}</div>
+    </div>
+
+    <div class="report-block">
+      <h3><span class="icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 13l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>你的优势</h3>
+      <div class="report-list two-col">
+        ${t.strengths.map(s=>`<div class="report-item"><span class="dot"></span><p><b>${esc(s)}</b></p></div>`).join('')}
+      </div>
+    </div>
+
+    <div class="report-block">
+      <h3><span class="icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v5M12 16.5v.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </span>需要留意的盲区</h3>
+      <div class="report-list two-col">
+        ${t.blindspots.map(s=>`<div class="report-item"><span class="dot" style="background:var(--danger)"></span><p><b>${esc(s)}</b></p></div>`).join('')}
+      </div>
+    </div>
+
+    <div class="report-block">
+      <h3><span class="icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 6H4a2 2 0 002 4h1M17 6h3a2 2 0 01-2 4h-1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </span>适合的领域</h3>
+      <div class="career-tags">${t.careers.map(c=>`<span>${esc(c)}</span>`).join('')}</div>
+    </div>
+
+    <div class="report-block">
+      <h3><span class="icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.6-9.3-9A5.5 5.5 0 0112 6.5 5.5 5.5 0 0121.3 12C19 16.4 12 21 12 21z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </span>关系与相处</h3>
+      <p class="relation-text">${esc(t.relation)}</p>
+    </div>
+
+    <div class="report-block">
+      <h3><span class="icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M17 8a5 5 0 10-10 0v3M7 11H5v6h14v-6h-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>容易合拍的类型</h3>
+      <div class="match-row">
+        ${t.matches.map(m=>{
+          const mt = TYPES[m];
+          return `<button class="match-card" data-type="${m}">
+            <div class="code" style="color:${mt.color}">${m}</div>
+            <div class="nm">${mt.name}</div>
+          </button>`;
+        }).join('')}
+      </div>
+    </div>`;
+
+  document.getElementById('btn-copy').addEventListener('click', copyShareText);
+  document.getElementById('btn-retest').addEventListener('click', startQuiz);
+  document.getElementById('btn-browse').addEventListener('click', ()=>{
+    location.hash = '#/home';
+    setTimeout(()=>scrollToSection('types'), 120);
+  });
+}
+
+/* ================= 分享文案 ================= */
+function buildShareText(){
+  const t = TYPES[state.result.code];
+  return `我刚完成「${SITE.fullName}」，结果是 ${state.result.code}「${t.name}」——${t.tagline}\n核心特质：${t.traits.join('、')}\n${SITE.shareHint}。\n你是哪一种灵魂？来测测看 →`;
+}
+
+async function copyShareText(){
+  const text = buildShareText();
+  try{
+    await navigator.clipboard.writeText(text);
+    showToast('分享文案已复制，去小红书分享吧');
+  }catch(err){
+    const ta = document.createElement('textarea');
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+    showToast('分享文案已复制，去小红书分享吧');
+  }
+}
+
+/* ================= 首页交互 ================= */
+function scrollToSection(id){
+  const el = document.getElementById(id);
+  if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+document.getElementById('btn-start').addEventListener('click', startQuiz);
+
+document.addEventListener('click', e=>{
+  // 类型卡片 / 合拍类型卡片 → 弹窗
+  const typeBtn = e.target.closest('[data-type]');
+  if(typeBtn){ renderTypeModal(typeBtn.dataset.type); return; }
+  // 首页锚点按钮
+  const scrollBtn = e.target.closest('[data-scroll]');
+  if(scrollBtn){
+    const id = scrollBtn.dataset.scroll;
+    if(location.hash !== '#/home'){
+      location.hash = '#/home';
+      setTimeout(()=>scrollToSection(id), 150);
+    } else {
+      scrollToSection(id);
+    }
+  }
+});
+
+/* ================= 初始化 ================= */
+renderTypeGrid();
+route();
+</script>
+
+</body>
+</html>
